@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CSS Modal Box</title>
+	<link rel="stylesheet" href="styles.css">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".modal_btn").click(function(){
+				$(".modal_box").addClass("active");
+			});
+
+			$(".modal_close").click(function(){
+				$(".modal_box").removeClass("active");
+			});
+		});
+	</script>
+</head>
+<body>
+	
+<div class="wrapper">
+	<div class="modal_btn">
+		Click here to open modal box
+	</div>
+
+	<div class="modal_box">
+		<div class="modal_bg_shadow"></div>
+		<div class="modal_box_wrap">
+			<div class="modal_close"></div>
+			<div class="modal_header">
+				CSS Modal Box
+			</div>
+			<div class="modal_body">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure labore veniam, velit mollitia, non repellendus dicta laudantium nostrum illum perspiciatis?
+			</div>
+			<div class="modal_footer">
+				<div class="modal_btn_grp">
+					<div class="btn btn_cancel">Cancel</div>
+					<div class="btn btn_confirm">Confirm</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+</body>
+</html>
